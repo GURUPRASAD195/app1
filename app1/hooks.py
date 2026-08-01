@@ -245,7 +245,7 @@ app_license = "mit"
 # ]
 
 # Automatically update python controller files with type annotations for this app.
-# export_python_type_annotations = True
+export_python_type_annotations = False
 
 # default_log_clearing_doctypes = {
 # 	"Logging DocType Name": 30  # days to retain logs
@@ -256,3 +256,15 @@ app_license = "mit"
 # List of apps whose translatable strings should be excluded from this app's translations.
 # ignore_translatable_strings_from = []
 
+app_include_js = "custom_desk.bundle.js"
+
+
+# Document Events
+# ---------------
+# Hook on document methods and events
+
+doc_events = {
+    "Test6": {
+        "validate": "app1.api.custom_logic"
+    }
+}
