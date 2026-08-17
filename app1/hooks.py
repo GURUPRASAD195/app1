@@ -5,6 +5,61 @@ app_description = " My first Frappe app"
 app_email = "guruprasad.m195@gmail.com"
 app_license = "mit"
 
+
+# website_clear_cache = "app1.overrides.clear_website_cache"
+
+
+# website_redirects = [
+#     {
+#         "source": "/about-us",
+#         "target": "/about"
+#     },
+    
+# ]
+
+# website_route_rules = [
+#     {
+#         "from_route": "/projects/<name>",
+#         "to_route": "app1/projects/project"
+#     }
+# ]
+
+# website_path_resolver = "app1.website.resolve_path"
+
+# website_catch_all = "not_found"
+
+# homepage = "about"
+
+# role_home_page = {
+#     "Customer": "orders",
+#     "Supplier": "bills",
+#     "Accounts User": "dashboard"
+# }
+
+# get_website_user_home_page = "app1.website.get_home_page"
+
+# portal_menu_items = [
+#     {
+#         "title": "Orders",
+#         "route": "/orders",
+#         "role": "Customer"
+#     },
+#     {
+#         "title": "Employee",
+#         "route": "/employee",
+#         "role": "Customer"
+#     }
+# ]
+
+# brand_html = """
+# <a href="/" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+#    <img src="/assets/app1/images/Bugatti_logo.png" height="35">
+#     <span style="font-size:20px;font-weight:bold;">
+#         Pur Sport
+#     </span>
+# </a>
+# """
+
 # Apps
 # ------------------
 
@@ -267,4 +322,10 @@ doc_events = {
     "Test6": {
         "validate": "app1.api.custom_logic"
     }
+}
+
+scheduler_events = {
+    "daily": [
+        "app1.tasks.daily_maintenance"
+    ]
 }
