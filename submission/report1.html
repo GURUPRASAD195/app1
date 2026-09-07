@@ -1,0 +1,93 @@
+<style>
+    .report-container {
+        width: 100%;
+        padding: 30px;
+        font-family: Arial, sans-serif;
+    }
+
+    .report-title {
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
+
+    .filter-section {
+        margin-bottom: 25px;
+        font-size: 14px;
+    }
+
+    .filter-label {
+        font-weight: bold;
+    }
+
+    .report-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 15px;
+    }
+
+    .report-table th,
+    .report-table td {
+        border: 1px solid red;
+        padding: 10px;
+        text-align: left;
+    }
+
+    .report-table th {
+        font-weight: bold;
+        background-color: #f2f2f2;
+    }
+</style>
+
+<div class="report-container">
+
+    <div class="report-title">
+        Customer Report
+    </div>
+
+    <div class="filter-section">
+        <span class="filter-label">Customer Name:</span>
+        {%= filters.customer_name %}
+    </div>
+
+    <table class="report-table">
+
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Customer Name</th>
+                <th>Phone Number</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            {% for(var i = 0, l = data.length; i < l; i++) { %}
+
+            <tr>
+                <td>
+                    {%= i + 1 %}
+                </td>
+
+                <td>
+                    {%= data[i].name %}
+                </td>
+
+                <td>
+                    {%= data[i].customer_name %}
+                </td>
+
+                <td>
+                    {%= data[i].phone_number %}
+                </td>
+            </tr>
+
+            {% } %}
+
+        </tbody>
+
+    </table>
+
+</div>
