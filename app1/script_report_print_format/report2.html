@@ -1,0 +1,39 @@
+<!-- <table border="1">
+    <thead>
+        <tr>
+            <th>Customer Name</th>
+            <th>Phone Number</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <% for (var i = 0; i < data.length; i++) { %>
+        <tr>
+            <td><%= data[i].customer_name %></td>
+            <td><%= data[i].phone_number %></td>
+        </tr>
+        <% } %>
+    </tbody>
+</table> -->
+
+<h2>Customer Report</h2>
+
+<table border="1" style="width:100%; border-collapse:collapse;">
+    <thead>
+        <tr>
+            <th>TEST NAME</th>
+            <th>Customer Name</th>
+            <th>Phone Number</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for(var i = 0; i < data.length; i++) { %}
+        <tr>
+            <td>{%= data[i].name %}</td>
+            <td>{%= data[i].customer_name %}</td>
+            <td>{%= data[i].phone_number %}</td>
+        </tr>
+        {% } %}
+    </tbody>
+</table>
